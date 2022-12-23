@@ -27,8 +27,6 @@ const Signup = () => {
 		try {
 			const url = "http://localhost:8080/api/users";
 			localStorage.setItem("email",data.email)
-			var today =new Date().toLocaleDateString()
-			console.log(data)
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 			console.log(res.message);
